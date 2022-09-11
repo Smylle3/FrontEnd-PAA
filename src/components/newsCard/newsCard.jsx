@@ -1,12 +1,12 @@
 import React from "react";
-import "./styles.css";
+import { CardContainer, CardImage, NewsButton } from "./styles";
 
 export default function NewsCard({ newsTitle, newsImage }) {
     return (
-        <section className="card_container">
-            <img alt="news_image" className="card_image" src={newsImage} />
+        <CardContainer>
+            <CardImage alt="new_image" src={newsImage} />
             <h2>{newsTitle}</h2>
-            <button className='news_button'>Ver notícia completa...</button>
-        </section>
+            <NewsButton>Ver notícia completa...</NewsButton>
+        </CardContainer>
     );
 }
