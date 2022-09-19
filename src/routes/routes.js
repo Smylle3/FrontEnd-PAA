@@ -10,7 +10,7 @@ export default function RoutesNews() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} exact />
-                <Route path="/news" element={<NewsPage />} />
+                <Route path="/news/:id" element={<NewsPage />} />
             </Routes>
         </BrowserRouter>
     );
