@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "pages/home/home";
+import RoutesNews from "routes/routes";
 
 function App() {
-    return <Home />;
+    return <RoutesNews />;
 }
 
 export default App;
