@@ -25,7 +25,6 @@ export default function NewsPage() {
     const [loading, setloading] = useState(false);
     const [liked, setliked] = useState(false);
 
-    console.log(newsInfo[1]);
     useEffect(() => {
         setloading(true);
         api.get(`/articles/${id}`, {})
