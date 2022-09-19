@@ -37,7 +37,7 @@ export const NewsSubTitle = styled.h3`
 export const NewsContent = styled.p`
     margin: 0;
     padding: 0 5em;
-    text-align: justify;
+    text-align: left;
 
     @media (max-width: 930px){
         padding: 0 2em;
