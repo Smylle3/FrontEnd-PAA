@@ -11,7 +11,7 @@ export const ContainerGeneral = styled.div`
     flex-direction: column;
     gap: 2em;
     box-sizing: border-box;
-    padding: 2em 0;
+    padding: 6em 0 2em 0;
 `
 
 export const HeaderNews = styled.header`
@@ -20,13 +20,28 @@ export const HeaderNews = styled.header`
 `
 
 export const HeaderButtons = styled.button`
+display: flex;
+align-items: center;
+justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     border: 1px solid transparent;
-    font-size: large;
-    padding-bottom: .1em;
+    box-shadow: 0 0 15px -5px black;
+    box-sizing: border-box;
+    padding: .5em;
+    margin: 0;
+    gap: 1em;
+    font-size: 2.5em;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
     transition: .5s all;
-
-    :hover{
-        border-bottom: 1px solid #000;
+    z-index: 999;
+    @media (max-width: 930px){
+        gap: 0;
+        padding: 1em 0;
+    font-size: 2em;
     }
 `
