@@ -1,12 +1,33 @@
 import React from "react";
-import { CardContainer, CardImage, NewsButton } from "./styles";
+import { useNavigate } from "react-router-dom";
+import {
+    ButtonsContainer,
+    CardContainer,
+    CardImage,
+    NewsButton,
+} from "./styles";
 
-export default function NewsCard({ newsTitle, newsImage }) {
+export default function NewsCard({ newsTitle, newsSubtitle, newsImage, id }) {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate(`/news/${id}`);
+    };
+
     return (
         <CardContainer>
-            <CardImage alt="new_image" src={newsImage} />
-            <h2>{newsTitle}</h2>
-            <NewsButton>Ver notícia completa...</NewsButton>
+            <CardImage
+                onClick={handleNavigate}
+                alt={newsTitle}
+                src={newsImage}
+                loading="lazy"
+            />
+            <h2 onClick={handleNavigate}>{newsTitle}</h2>
+            <p onClick={handleNavigate}>{newsSubtitle}</p>
+            <ButtonsContainer>
+                <NewsButton onClick={handleNavigate}>
+                    Ver notícia completa...
+                </NewsButton>
+            </ButtonsContainer>
         </CardContainer>
     );
 }
