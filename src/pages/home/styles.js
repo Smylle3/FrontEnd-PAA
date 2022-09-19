@@ -13,6 +13,10 @@ export const ContainerGeneral = styled.div`
     gap: 2em;
     box-sizing: border-box;
     padding: 6em 0 2em 0;
+
+    @media (max-width: 930px){
+        padding: 7em 0 2em 0;
+    }
 `
 
 export const HeaderNews = styled.header`
@@ -21,9 +25,9 @@ export const HeaderNews = styled.header`
 `
 
 export const HeaderButtons = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,9 +44,20 @@ justify-content: center;
     cursor: pointer;
     transition: .5s all;
     z-index: 999;
+    
     @media (max-width: 930px){
-        gap: 0;
-        padding: 1em 0;
-    font-size: 2em;
+        flex-direction: column;
+        gap: .5em;
+        padding: .2em 0;
+        font-size: 2em;
     }
+`
+
+export const SearchInput = styled.input`
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: 0 none;
+    box-sizing: border-box;
+    padding: .5em;
+    font-size: .4em;
 `
