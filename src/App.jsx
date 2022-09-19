@@ -1,11 +1,8 @@
 import React from "react";
+import RoutesNews from "routes/routes";
 
 function App() {
-  return (
-    <div>
-      your news
-    </div>
-  );
+    return <RoutesNews />;
 }
 
 export default App;
