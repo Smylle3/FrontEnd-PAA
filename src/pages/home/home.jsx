@@ -39,7 +39,7 @@ export default function Home() {
                     ))}
                 </>
             ) : (
-                <h1>Loading</h1>
+                <h1>Carregando...</h1>
             )}
         </ContainerGeneral>
     );
